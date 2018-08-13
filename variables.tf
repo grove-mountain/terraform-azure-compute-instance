@@ -1,7 +1,7 @@
-variable "student" {
+variable "name_prefix" {
   type        = "string"
-  default     = "defaultStudent-20180619"
-  description = "This variable defines the region resources will be created in"
+  default     = "deleteMeNow"
+  description = "The name prepended to any resources created.  These should be unique between environments as Resource Groups are used here.   e.g. jlundberg-dev, jlundberg-qa, jlundberg-prod"
 }
 
 variable "resource_group_location" {
@@ -50,3 +50,10 @@ variable "admin_password" {
     default     = "8675309-Jenny"
     description = "Admin password for windows servers created"
 }
+
+variable "vm_size" {
+    type        = "string"
+    default     = "Standard_DS1_V2"
+    description = "Virtual Machine instance type"
+}
+

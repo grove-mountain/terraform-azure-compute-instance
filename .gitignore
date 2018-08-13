@@ -4,3 +4,7 @@
 
 # Module directory
 .terraform/
+
+# Local environments
+# These could contain secrets and are just used for building tfe workspaces
+env.sh

@@ -1,6 +1,6 @@
 # Create a resource group if it doesn’t exist
 resource "azurerm_resource_group" "myfirstrg" {
-  name     = "${var.student}-ResourceGroup"
+  name     = "${var.name_prefix}-RG"
   location = "${var.resource_group_location}"
 
   tags {
@@ -15,9 +15,10 @@ module "windowsserver" {
   version             = "1.1.6"
   location            = "${var.resource_group_location}"
   vm_hostname         = "windowsvm"
+  vm_size             = "${var.vm_size}"
   admin_password      = "${var.admin_password}"
   vm_os_simple        = "WindowsServer"
-  public_ip_dns       = ["${var.student}"]
+  public_ip_dns       = ["${var.name_prefix}"]
   vnet_subnet_id      = "${azurerm_subnet.myfirstsubnet.id}"
   resource_group_name = "${azurerm_resource_group.myfirstrg.name}"
 }

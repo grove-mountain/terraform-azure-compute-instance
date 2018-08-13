@@ -15,20 +15,6 @@ Capture the _id_ field in the subscription you want:
 export ARM_SUBSCRIPTION_ID=<id>
 ```
 
-Before running the setup script, there are other variables to either set beforehand or during script runtime.   
-
-Those are:
-ARM_JSON : The location to store the JSON results from the azure login.  Default: ~/.
-e.g.
-```
-export ARM_JSON=~/.azure_sp_tfe
-```
-
-TFE_ARM_ENV : The location of the file to store Azure login variables for TFE.  
-e.g.
-```
-export TFE_ARM_ENV=~/.tfe_azure_envs
-```
 
 Running the create_service_principal.sh script will do the rest for you:
 * Create the service account
