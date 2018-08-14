@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -z "${TERRAFORM_ENTERPRISE_TOKEN}" ];then
+  echo "TERRAFORM_ENTERPRISE_TOKEN is not set, tfe cli will not be able to authenticate"
+  echo "Set this to a user token with permissions to create workspaces"
+  exit 1
+fi
+
 # Load in common environment variables for this repo
 . default_env.sh
 
