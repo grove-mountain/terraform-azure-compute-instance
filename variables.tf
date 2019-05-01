@@ -5,7 +5,7 @@ variable "name_prefix" {
 }
 
 variable "foo" {
-    default = "woo"
+    default = "foo"
 }
 
 variable "resource_group_location" {
