@@ -22,7 +22,7 @@ EOF
 exit 0
 }
 
-while getopts ":p:s" opt;do
+while getopts "p:s:" opt;do
   case ${opt} in
     p) ARM_SP_PREFIX=${OPTARG};;
     s) ARM_SUBSCRIPTION_ID=${OPTARG};;

@@ -4,10 +4,6 @@ variable "name_prefix" {
   description = "The name prepended to any resources created.  These should be unique between environments as Resource Groups are used here.   e.g. jlundberg-dev, jlundberg-qa, jlundberg-prod"
 }
 
-variable "foo" {
-    default = "foo"
-}
-
 variable "resource_group_location" {
     type        = "string"
     default     = "East US"

@@ -6,6 +6,6 @@ output "sb_address_prefix" {
     value = "${azurerm_subnet.myfirstsubnet.address_prefix}"
 }
 
-output "public_ip_address" {
-    value = "${module.windowsserver.public_ip_address}"
+output "public_ip_dns_name" {
+    value = "${module.windowsserver.public_ip_dns_name}"
 }
