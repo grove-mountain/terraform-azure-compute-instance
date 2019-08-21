@@ -17,7 +17,7 @@ variable "environment_tag" {
 
 variable "ttl_tag" { 
     type        = "string" 
-    default     = "-1" 
+    default     = "24" 
     description = "Time To Live in hours for tagged resources.  Do not use units.  -1 is infinite"
 }
 
